@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Dialogo1
   m_EditorClassIdentifier: 
   frases:
-  - 'Hola Pedro Sanchez , vete del gobierno por favor '
-  - necesito que me des una paguita
-  - 'que me llamo moha mira : Amego tiene segarro'
+  - Hola viajero enano
+  - comprame unas calabazas
+  - 'aon ricas
+
+'
   tiempoEntreLetras: 0

@@ -21,8 +21,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movimiento();// ctrl r m hacer metodo
-        ComprobarInreraccion(); //Alt enter generar metodo
+        if (Time.timeScale == 1.0f)
+        {
+            Movimiento();// ctrl r m hacer metodo
+        }
+       ComprobarInreraccion(); //Alt enter generar metodo
 
     }
 
@@ -35,7 +38,7 @@ public class Player : MonoBehaviour
             agent.stoppingDistance = 2f;
 
             //Mira a ver si hemos llegado a dicho destino 
-            if(agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            if(!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
                 //Y por lo tanto, interactuo con el npc 
                 npc.Interactuar(this.transform);
