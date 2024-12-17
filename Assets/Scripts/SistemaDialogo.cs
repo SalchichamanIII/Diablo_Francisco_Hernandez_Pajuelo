@@ -7,6 +7,7 @@ public class SistemaDialogo : MonoBehaviour
 {
     [SerializeField] private GameObject marcoDialogo; //Marci habilitar / deshabilitar
     [SerializeField] private TMP_Text textoDialogo; //El texto donde se veran reflejados los dialogos
+    [SerializeField] private Transform npcCamera; //Camara compartida por todos los npc
 
     //PATRÓN SINGLE-TON
     //1.Solo existe una unica instancia de SistemaDialogo
@@ -35,12 +36,15 @@ public class SistemaDialogo : MonoBehaviour
         }
     }
 
-    public void IniciarDialogo(DialogaSO dialogo)
+    public void IniciarDialogo(DialogaSO dialogo, Transform cameraPoint)
     {
         Time.timeScale = 0;
         //El dialogo actual que tenemos que tratar es el que me pasan por parametro
         dialogoActual =dialogo;
          marcoDialogo.SetActive(true);
+
+        //Posiciono Y ROTO la vamara en el punto de este npc
+        npcCamera.SetPositionAndRotation(cameraPoint.position, cameraPoint.rotation);
         StartCoroutine(EscribirFrase());
     }
     //sirve para escribir frase letra por letara 
