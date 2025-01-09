@@ -2336,6 +2336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ruta: {fileID: 775944866}
+  agent: {fileID: 775912159}
 --- !u!1001 &223656941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21872,6 +21873,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 363501522471302890}
+  - component: {fileID: 1027025335478611026}
+  - component: {fileID: 1027025335478611027}
   m_Layer: 0
   m_Name: EnemyVisual
   m_TagString: Untagged
@@ -21879,6 +21882,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1027025335478611026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027025335478611024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514bdafadc0a091478753b90462b4e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 775912159}
+--- !u!95 &1027025335478611027
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027025335478611024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 65d9b0937906fdd449246ff65bb385a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1069836322274375071
 Transform:
   m_ObjectHideFlags: 0
