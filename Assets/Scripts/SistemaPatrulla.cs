@@ -37,11 +37,14 @@ public class SistemaPatrulla : MonoBehaviour
 
     private void OnEnable()
     {
-        agent.speed = velocidadPatrulla;
+        //El sttopingdistance vuelve a ser 0 
+        agent.stoppingDistance = 0;
+        agent.speed = velocidadPatrulla; //Vuelvo a la velocidad de patrulla
+        StartCoroutine(PatrullarYEsperar());
     }
     void Start()
     {
-        StartCoroutine(PatrullarYEsperar());
+        
     }
 
     // Update is called once per frame

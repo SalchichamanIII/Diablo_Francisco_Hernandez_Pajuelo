@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class Npc : MonoBehaviour
+public class Npc : MonoBehaviour , IInteractuable
 {
     [SerializeField] private DialogaSO miDialogo;
     [SerializeField] private float duracionRotacion;
@@ -16,6 +16,12 @@ public class Npc : MonoBehaviour
         //Debug.Log("Hola jonash me duele la puchita");
         transform.DOLookAt(interactuador.position, duracionRotacion, AxisConstraint.Y).OnComplete(IniciarInteraccion);
     }
+
+    public void Interactuar()
+    {
+       
+    }
+
     private void IniciarInteraccion()
     {
 
