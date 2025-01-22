@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ca0cc28256efb6b4cbdad721399e1587, type: 2}
   m_BuildHeightMesh: 0
 --- !u!114 &63122945
 MonoBehaviour:
@@ -24472,7 +24472,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6920698709154577467, guid: 035bf9d9f0a8ab940ab01ae359491ab3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
