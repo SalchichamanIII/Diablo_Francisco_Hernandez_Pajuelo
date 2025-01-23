@@ -8,6 +8,9 @@ public class SistemaDialogo : MonoBehaviour
     [SerializeField] private GameObject marcoDialogo; //Marci habilitar / deshabilitar
     [SerializeField] private TMP_Text textoDialogo; //El texto donde se veran reflejados los dialogos
     [SerializeField] private Transform npcCamera; //Camara compartida por todos los npc
+    [SerializeField] AudioSource audioSource;
+
+
 
     //PATRÓN SINGLE-TON
     //1.Solo existe una unica instancia de SistemaDialogo
@@ -55,6 +58,9 @@ public class SistemaDialogo : MonoBehaviour
         textoDialogo.text = string.Empty;
         //Desmenuzo la frase actual por caracteres por separado
         char[] fraseEnLetras = dialogoActual.frases[indiceFraseActual].ToCharArray();
+
+        //HAZ LO DEL AUDIO PERRO 
+
 
         foreach(char letra in fraseEnLetras)
         {
