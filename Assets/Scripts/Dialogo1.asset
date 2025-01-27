@@ -18,4 +18,7 @@ MonoBehaviour:
   - 'son ricas
 
 '
+  sounds: []
   tiempoEntreLetras: 0
+  tieneMision: 1
+  mision: {fileID: 11400000, guid: 18e3229ced134e0408d419f8a8aee041, type: 2}

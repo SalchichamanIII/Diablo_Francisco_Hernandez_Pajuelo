@@ -9,6 +9,7 @@ public class SistemaDialogo : MonoBehaviour
     [SerializeField] private TMP_Text textoDialogo; //El texto donde se veran reflejados los dialogos
     [SerializeField] private Transform npcCamera; //Camara compartida por todos los npc
     [SerializeField] AudioSource audioSource;
+    [SerializeField] EventManagerSO eventManager;
 
 
 
@@ -113,6 +114,10 @@ public class SistemaDialogo : MonoBehaviour
         marcoDialogo.SetActive(false); //Cerramos el marco de dialogo
         indiceFraseActual = 0; //Para que en posteriores dialogos empecemos desde indice cero
         escribiendo = false ;
+        if (dialogoActual.tieneMision)
+        {
+            eventManager.NuevaMision(dialogoActual.mision);
+        }
         dialogoActual = null; //Ya no tengo dialogo que escribir. 
     }
 
