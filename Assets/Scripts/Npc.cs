@@ -6,9 +6,33 @@ using UnityEngine;
 
 public class Npc : MonoBehaviour , IInteractuable
 {
-    [SerializeField] private DialogaSO miDialogo;
+    [SerializeField] private EventManagerSO eventManager;
+    [SerializeField] private MisionSO miMision;
+    [SerializeField] private DialogaSO miDialogo1;
+    [SerializeField] private DialogaSO miDialogo2;
     [SerializeField] private float duracionRotacion;
     [SerializeField] private Transform cameraPoint; //Punto en el que se pondra CAMERANPC
+
+    private DialogaSO dialogoActual;
+
+    private void Awake()
+    {
+        dialogoActual = miDialogo1;
+    }
+
+    private void OnEnable()
+    {
+        eventManager.OnTerminarMision += CambiarDialogo;
+    }
+
+    private void CambiarDialogo(MisionSO misionTerminada)
+    {
+        if(miMision == misionTerminada)
+        {
+            dialogoActual = miDialogo2;
+        }
+    }
+
     public void Interactuar(Transform interactuador)
     {
         //Poco a poco voy rotando hacia el interactuador y Cuando termine... se inicia la interaccion
@@ -25,7 +49,7 @@ public class Npc : MonoBehaviour , IInteractuable
     private void IniciarInteraccion()
     {
 
-        SistemaDialogo.sistema.IniciarDialogo(miDialogo, cameraPoint);
+        SistemaDialogo.sistema.IniciarDialogo(miDialogo1, cameraPoint);
     }
     // Start is called before the first frame update
     void Start()
@@ -37,5 +61,10 @@ public class Npc : MonoBehaviour , IInteractuable
     void Update()
     {
         
+    }
+
+    private void OnDisable()
+    {
+        eventManager.OnTerminarMision -= CambiarDialogo;
     }
 }

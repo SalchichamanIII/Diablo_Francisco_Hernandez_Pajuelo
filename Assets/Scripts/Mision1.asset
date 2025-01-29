@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ccf1f9d30cea84458d32e4967089756, type: 3}
   m_Name: Mision1
   m_EditorClassIdentifier: 
-  ordenInicial: 
-  ordenFinal: 
-  tieneRepeticion: 0
-  totalRepeticiones: 0
+  ordenInicial: Recupera hasta 3 setas de la muerte
+  ordenFinal: Vuelve con Rigoberta
+  tieneRepeticion: 1
+  totalRepeticiones: 3
   indiceMision: 0
   repeticionActual: 0

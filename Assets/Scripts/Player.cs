@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     private void ComprobarInreraccion()
     {
         //Si existe un interactuable al cual clicke y lleva el script Npc ..
-       if(ultimoClick != null && ultimoClick.TryGetComponent(out Npc npc))
+       if(ultimoClick != null && ultimoClick.TryGetComponent(out IInteractuable interactuable))
         {
             //Actualizo la distancia de pearada para no comerme al npc
             agent.stoppingDistance = 2f;
