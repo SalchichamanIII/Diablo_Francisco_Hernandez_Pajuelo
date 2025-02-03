@@ -8,7 +8,7 @@ public class SetaDeMuerte : MonoBehaviour , IInteractuable
     [SerializeField] private MisionSO mision;
     [SerializeField] private EventManagerSO eventManager;
 
-    public void Interactuar()
+    public void Interactuar(Transform interactor)
     {
         mision.repeticionActual++; //Aumentamos en uno la repeticion de esta mision 
 
