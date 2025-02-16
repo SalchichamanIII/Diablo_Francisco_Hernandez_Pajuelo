@@ -15,6 +15,5 @@ MonoBehaviour:
   ordenInicial: Recupera hasta 3 setas de la muerte
   ordenFinal: Vuelve con Rigoberta
   tieneRepeticion: 1
-  totalRepeticiones: 3
+  totalRepeticiones: 10
   indiceMision: 0
-  repeticionActual: 0

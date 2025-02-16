@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e5081dd6f164e804a816d8987a4e8e73
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - menuPausaUI: {fileID: 2843970934329554986, guid: 3a7ad105bb99d9c42868effcf84ed0c8,
+      type: 3}
+  - musicaFondo: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
